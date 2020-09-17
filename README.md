@@ -4,20 +4,20 @@ This sourcemod plugin sends [Get5 Event logs](https://github.com/splewis/get5/wi
 
 This plugin this plugin was built to work in conjuction with [Discord 10man Bot](https://github.com/yannickgloster/discord-10man) however it can be used for any other project.
 
-## CVARs
+#### CVARs
 ```
 get5_event_api_url - Set's the server url to send the post request to
 get5_event_api_available - Checks if the plugin is correctly loaded on the server
 ```
 
-# Server Requirements
+### Server Requirements
 
 To use this plugin on your server, you must have the following:
 
 - [Get5](https://github.com/splewis/get5)
 - [SteamWorks](https://forums.alliedmods.net/showthread.php?t=229556)
 
-# Build Requirements
+### Build Requirements
 
 To build the plugin, you must have the following:
 
@@ -25,6 +25,6 @@ To build the plugin, you must have the following:
 - [SteamWorks](https://raw.githubusercontent.com/KyleSanderson/SteamWorks/master/Pawn/includes/SteamWorks.inc)
 - [sm-json](https://github.com/clugg/sm-json)
 
-# Thanks To
+#### Thanks To
 
 Forked from [splewis'](https://github.com/splewis) [get5_apistats](https://github.com/splewis/get5/blob/master/scripting/get5_apistats.sp) plugin.

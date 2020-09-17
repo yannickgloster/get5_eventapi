@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * Get5 web API integration
+ * Get5 Event API
  * Copyright (C) 2016. Sean Lewis.  All rights reserved.
  * =============================================================================
  *
@@ -48,11 +48,11 @@ char g_APIURL[128];
 
 // clang-format off
 public Plugin myinfo = {
-  name = "Get5 Web API Integration",
-  author = "splewis",
-  description = "Records match stats to a get5-web api",
+  name = "Get5 Event API",
+  author = "Yannick Gloster & splewis",
+  description = "Sends the Get5 Event JSON to a server",
   version = PLUGIN_VERSION,
-  url = "https://github.com/splewis/get5"
+  url = "https://github.com/yannickgloster/get5_eventapi"
 };
 // clang-format on
 
@@ -135,7 +135,7 @@ static Handle CreateRequest(EHTTPMethod httpMethod, const char[] apiMethod, any:
 
   } else {
     SteamWorks_SetHTTPCallbacks(req, RequestCallback);
-    AddStringParam(req, "key", g_APIKey);
+    // AddStringParam(req, "key", g_APIKey);
     return req;
   }
 }
@@ -391,4 +391,20 @@ static int MapNumber() {
   Get5_GetTeamScores(MatchTeam_Team2, t2, buf);
   Get5_GetTeamScores(MatchTeam_TeamNone, n, buf);
   return t1 + t2 + n;
+}
+
+static void AddJSONBody(Handle request, const char[] value) {
+  if (!SteamWorks_SetHTTPRequestRawPostBody(request, "application/json", value, strlen(value))) {
+    LogError("Failed to add http body %s", value);
+  } else {
+    LogDebug("Added body %s to request", value);
+  }
+}
+
+public void Get5_OnEvent(const char[] eventJson) {
+  Handle req = CreateRequest(k_EHTTPMethodPOST, "event");
+  if (req != INVALID_HANDLE) {
+    AddJSONBody(req, eventJson);
+    SteamWorks_SendHTTPRequest(req);
+  }
 }

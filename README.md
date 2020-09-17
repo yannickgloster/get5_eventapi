@@ -1,6 +1,6 @@
 # Get5 Event API Plugin
 
-![GitHub All Releases](https://img.shields.io/github/downloads/yannickgloster/get5_eventapi/total)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yannickgloster/get5_eventapi)
 
 This sourcemod plugin sends [Get5 Event logs](https://github.com/splewis/get5/wiki/Event-logs) as a post request to a server set with the CVAR `get5_event_api_url`.
 

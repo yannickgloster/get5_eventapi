@@ -2,7 +2,7 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yannickgloster/get5_eventapi?color=blueviolet&style=for-the-badge) [![Discord](https://img.shields.io/discord/762204302348517377?color=blue&style=for-the-badge)](https://discord.gg/aZfjp6V)
 
-[Support on Discord](https://discord.gg/aZfjp6V)
+### **[Support on Discord](https://discord.gg/aZfjp6V)**
 
 This sourcemod plugin sends [Get5 Event logs](https://github.com/splewis/get5/wiki/Event-logs) as a post request to a server set with the CVAR `get5_event_api_url`.
 

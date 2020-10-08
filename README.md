@@ -1,6 +1,6 @@
 # Get5 Event API Plugin
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/yannickgloster/get5_eventapi?color=blueviolet&style=for-the-badge) [![Discord](https://img.shields.io/discord/762204302348517377?color=blue&style=for-the-badge)](https://discord.gg/aZfjp6V)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yannickgloster/get5_eventapi?color=blueviolet&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/yannickgloster/get5_eventapi?color=orange&style=for-the-badge) [![Discord](https://img.shields.io/discord/762204302348517377?color=blue&style=for-the-badge)](https://discord.gg/aZfjp6V)
 
 ### **[Support on Discord](https://discord.gg/aZfjp6V)**
 
